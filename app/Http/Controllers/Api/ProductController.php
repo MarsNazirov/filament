@@ -27,9 +27,14 @@ class ProductController extends Controller
     public function store(StoreRequest $request)
     {
         $data = $request->validated();
-
         $product = Product::create($data);
 
+        // Если это Inertia (браузер) -> редирект на список
+        if (request()->header('X-Inertia')) {
+            return to_route('dashboard'); 
+        }
+
+        // Если это Postman -> JSON
         return response()->json(new ProductResource($product), 201);
     }
 
@@ -47,8 +52,11 @@ class ProductController extends Controller
     public function update(UpdateRequest $request, Product $product)
     {
         $data = $request->validated();
-
         $product->update($data);
+
+        if (request()->header('X-Inertia')) {
+            return to_route('dashboard');
+        }
 
         return new ProductResource($product);
     }
@@ -59,6 +67,10 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
+
+        if (request()->header('X-Inertia')) {
+            return redirect()->back();
+        }
 
         return response()->noContent();
     }
