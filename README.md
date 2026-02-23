@@ -101,7 +101,7 @@ cp .env.example .env
 После запуска сидеров будет создан администратор:
 
 * **URL:** [http://localhost](http://localhost)
-* **Email:** [admin@test.com](mailto:admin@test.com)
+* **Email:** admin@example.com
 * **Password:** password
 
 ---
