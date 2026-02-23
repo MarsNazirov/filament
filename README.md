@@ -122,7 +122,7 @@ POST /api/login
 
 ```json
 {
-  "email": "admin@test.com",
+  "email": "admin@example.com",
   "password": "password"
 }
 ```
