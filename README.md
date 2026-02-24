@@ -8,6 +8,7 @@
 
 ## 🛠 Технологический стек
 
+* **Admin Panel:** Filament v3
 * **Backend:** PHP 8.5, Laravel 12
 * **Frontend:** Vue.js 3, Inertia.js
 * **Database:** PostgreSQL
@@ -32,6 +33,13 @@
 
   * Web: Laravel Session + Inertia
   * API: Laravel Sanctum (Bearer Token)
+
+---
+
+### 🚀 Дополнительное задание (Filament)
+*   [x] **Админ-панель:** Внедрен Filament v3.
+*   [x] **Ресурсы:** CRUD для Товаров и Категорий.
+*   [x] **Функции:** Фильтрация, сортировка, валидация форм, загрузка связей.
 
 ---
 
@@ -103,6 +111,13 @@ cp .env.example .env
 * **URL:** [http://localhost](http://localhost)
 * **Email:** admin@example.com
 * **Password:** password
+
+---
+
+### 🖥 Админ-панель (Filament)
+*   **URL:** http://localhost/admin/login
+*   **Email:** admin@example.com
+*   **Password:** password
 
 ---
 
